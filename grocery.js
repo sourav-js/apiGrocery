@@ -4808,13 +4808,11 @@ app.post("/updateData/:id/:data",function(req,res){
 
               prods.updateOne({Price:req.body.price},function(err,info){
  
- 
                  var calc=parseInt((req.body.price*100)/prods.offer)
                  prods.off=`${calc} % off`
                  prods.save()
                  req.flash("success","Updated")
-                 res.redirect("/groceryProduct")
-
+                 res.redirect("https://admin-groceryji.herokuapp.com/groceryProduct")
              })
             
          
@@ -4860,7 +4858,7 @@ app.post("/updateData/:id/:data",function(req,res){
          prods.updateOne({Name:req.body.name},function(err,info){
 
              req.flash("success","Updated")
-             res.redirect("/groceryProduct")
+             res.redirect("https://admin-groceryji.herokuapp.com/groceryProduct")
 
         })  
       
@@ -4907,8 +4905,8 @@ app.post("/updateData/:id/:data",function(req,res){
                  var calc=parseInt((prods.Price*100)/req.body.offer)
                  prods.off=`${calc} % off`
                  prods.save()
-             req.flash("success","Updated")
-             res.redirect("/groceryProduct")
+              req.flash("success","Updated")
+             res.redirect("https://admin-groceryji.herokuapp.com/groceryProduct")
 
            })
      

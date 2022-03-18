@@ -1684,7 +1684,7 @@ app.get("/updateCustomersStatus/:id/:mon",function(req,res){
                                                        
                         
                         
-                                            <a href="https://groceryji.com/"><button style=color:green>GroceryJi</button></a>                       
+                                            <a href="https://groceryji.herokuapp.com/"><button style=color:green>GroceryJi</button></a>                       
                                                           
                                                         `
                                     } 
@@ -4995,7 +4995,7 @@ app.get("/increaseStockOne/:id/:stock",function(req,res){
                                                        
                         
                         
-                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
+                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
                                                           
                                                           </form>`
             }
@@ -5104,7 +5104,7 @@ app.get("/increaseStockTwo/:id/:stock",function(req,res){
                                                        
                         
                         
-                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
+                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
                                                           
                                                           </form>`
             }
@@ -5211,7 +5211,7 @@ app.get("/increaseStock/:id/:stock",function(req,res){
                                                        
                         
                         
-                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                      
+                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                      
                                                           
                                                           </form>`
             }
@@ -5431,7 +5431,7 @@ app.post("/addProduct",function(req,res){
                 bcc:`${users[i].username}`,
                 subject:"GroceryJi",
                 html:`<div align=center><b>Hi,${users[i].first}</b><br><b>${prod.Name} New Product Added<br></b>
-                        <a href=https://groceryji.com/moreinfo/${prod._id}><b>Check It Out</b></b></a></div>
+                        <a href=https://groceryji.herokuapp.com/moreinfo/${prod._id}><b>Check It Out</b></b></a></div>
                         
                         
                        
@@ -5552,7 +5552,7 @@ else{
                 bcc:`${users[i].username}`,
                 subject:"GroceryJi",
                 html:`<div align=center><b>Hi,${users[i].first}</b><br><b>${prod.Name} New Product Added<br></b>
-                        <a href=https://groceryji.com/moreinfo/${prod._id}><b>Check It Out</b></b></a></div>
+                        <a href=https://groceryji.herokuapp.com/moreinfo/${prod._id}><b>Check It Out</b></b></a></div>
                         
                         
                        
@@ -6025,7 +6025,7 @@ app.get("/statusChange/:id/:key",function(req,res){
                                                                        
                                         
                                         
-                                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
+                                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
                                                                           
                                                                           </form>`
                             }
@@ -6135,7 +6135,7 @@ app.get("/statusChange/:id/:key",function(req,res){
                                                                        
                                         
                                         
-                                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
+                                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
                                                                           
                                                                           </form>`
                             }
@@ -6249,7 +6249,7 @@ app.get("/statusChange/:id/:key",function(req,res){
                                                                        
                                         
                                         
-                                                            <a href="https://groceryji.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
+                                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
                                                                           
                                                                           </form>`
                             }
@@ -6355,7 +6355,7 @@ app.get("/statusChange/:id/:key",function(req,res){
                                             <br>
                                             Thank You 
                                             <br>
-                                            From GroceryJi           
+                                            From <a href=https://groceryji.herokuapp.com>GroceryJi</a>           
                         
                         
                                            

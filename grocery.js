@@ -5311,11 +5311,11 @@ app.get("/deleteProduct/:id",function(req,res){
                  if (alluser.cart[p].pid==req.params.id){
                         
                       alluser.sum=alluser.sum-alluser.cart[p].Price
-                      alluser.save()
                  
-                      break
+                      
             }
             }
+            alluser.save()
          }
          
          
@@ -5343,6 +5343,10 @@ app.get("/deleteProduct/:id",function(req,res){
    })
 
 })
+
+
+
+
 app.post("/addProduct",function(req,res){
  
  

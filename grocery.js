@@ -295,6 +295,7 @@ var productSchema=new mongoose.Schema({
     totalTwo:Number,
 
      
+    datetwo:{type:Date,default:Date.now},
 
 
     date:{type:Date,default:Date.now},
@@ -5131,7 +5132,7 @@ app.get("/increaseStockTwo/:id/:stock",function(req,res){
          var p=0
          prods.totalTwo=prods.totalTwo+Number(req.params.stock)
          prods.emptyTwo=false
-         prods.date=Date.now()
+         prods.datetwo=Date.now()
          for (var i=0;i<Number(req.params.stock);i++){
 
               two.create({id:prods._id},function(err,sto){

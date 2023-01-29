@@ -4948,13 +4948,10 @@ app.get("/increaseStockOne/:id/:stock",function(req,res){
          prods.totalOne=0
          prods.save()
         
-      user.find({},function(err,users){  
       
-      for(var i=0;i<users.length;i++)
-       user.findById(users[i]._id,function(err,found){
         for(var j=0;j<prods.notify.length;j++){
            
-           if (found.username==prods.notify[j].username){
+       user.findOne({username:prods.notify[j].username},function(err,found){
 
 
 
@@ -4965,57 +4962,14 @@ app.get("/increaseStockOne/:id/:stock",function(req,res){
 
                  })
               
-               break
-           }                   
+               
+           })                   
                
 
      }
-   })
-  })
-         for(var i=0;i<prods.notify.length;i++){
-
-              var transport=nodemailer.createTransport({
-            service:"gmail",
-            auth:{
-                user:"grocery.ofc@gmail.com",
-                pass:process.env.password
-            }
-        }); 
-
-
-            var mailoptions={
-                from:"grocery.ofc@gmail.com",
-                bcc:`${prods.notify[i].username}`,
-                subject:"GroceryJi",
-                html:`Hi,welcome to GroceryJi<br>
-                                           Your requested  product ${prods.Name}, Price: ${prods.Price},Size:1L is now available
-                                           in stock..
-                                           <br>
-                                           
-                                            <br>
-                                                       
-                        
-                        
-                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
-                                                          
-                                                          </form>`
-            }
-                console.log("hmmmmm")
-                transport.sendMail(mailoptions,function(err,info){
-                    if(err)
-                    {
-                        console.log("error")
-                    }
-                        else{
-                            console.log("here")
-
-                        }
-
-
-                
-
-  })
- }  
+   
+  
+         
 }
 
 
@@ -5057,13 +5011,10 @@ app.get("/increaseStockTwo/:id/:stock",function(req,res){
          prods.totalTwo=0
          prods.save()
         
-      user.find({},function(err,users){  
       
-      for(var i=0;i<users.length;i++)
-       user.findById(users[i]._id,function(err,found){
         for(var j=0;j<prods.notify.length;j++){
            
-           if (found.username==prods.notify[j].username){
+       user.findOne({username:prods.notify[j].username},function(err,found){
 
 
 
@@ -5074,57 +5025,14 @@ app.get("/increaseStockTwo/:id/:stock",function(req,res){
 
                  })
               
-               break
-           }                   
+               
+           })                   
                
 
      }
-   })
-  })
-         for(var i=0;i<prods.notify.length;i++){
-
-              var transport=nodemailer.createTransport({
-            service:"gmail",
-            auth:{
-                user:"grocery.ofc@gmail.com",
-                pass:process.env.password
-            }
-        }); 
-
-
-            var mailoptions={
-                from:"grocery.ofc@gmail.com",
-                bcc:`${prods.notify[i].username}`,
-                subject:"GroceryJi",
-                html:`Hi,welcome to GroceryJi<br>
-                                           Your requested  product ${prods.Name}, Price: ${prods.Price},Size:2L is now available
-                                           in stock..
-                                           <br>
-                                           
-                                            <br>
-                                                       
-                        
-                        
-                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                       
-                                                          
-                                                          </form>`
-            }
-                console.log("hmmmmm")
-                transport.sendMail(mailoptions,function(err,info){
-                    if(err)
-                    {
-                        console.log("error")
-                    }
-                        else{
-                            console.log("here")
-
-                        }
-
-
-                
-
-  })
- }  
+   
+  
+         
 }
 
 
@@ -5164,13 +5072,10 @@ app.get("/increaseStock/:id/:stock",function(req,res){
          prods.stocking=0
          prods.save()
         
-      user.find({},function(err,users){  
       
-      for(var i=0;i<users.length;i++)
-       user.findById(users[i]._id,function(err,found){
         for(var j=0;j<prods.notify.length;j++){
            
-           if (found.username==prods.notify[j].username){
+       user.findOne({username:prods.notify[j].username},function(err,found){
 
 
 
@@ -5181,57 +5086,14 @@ app.get("/increaseStock/:id/:stock",function(req,res){
 
                  })
               
-               break
-           }                   
+               
+           })                   
                
 
      }
-   })
-  })
-         for(var i=0;i<prods.notify.length;i++){
-
-              var transport=nodemailer.createTransport({
-            service:"gmail",
-            auth:{
-                user:"grocery.ofc@gmail.com",
-                pass:process.env.password
-            }
-        }); 
-
-
-            var mailoptions={
-                from:"grocery.ofc@gmail.com",
-                bcc:`${prods.notify[i].username}`,
-                subject:"GroceryJi",
-                html:`Hi,welcome to GroceryJi<br>
-                                           Your requested  product ${prods.Name}, Price: ${prods.Price} is now available
-                                           in stock..
-                                           <br>
-                                           
-                                            <br>
-                                                       
-                        
-                        
-                                            <a href="https://groceryji.herokuapp.com/moreinfo/${prods._id}"<button style=color:green>Check Your product Details</button></a>                      
-                                                          
-                                                          </form>`
-            }
-                console.log("hmmmmm")
-                transport.sendMail(mailoptions,function(err,info){
-                    if(err)
-                    {
-                        console.log("error")
-                    }
-                        else{
-                            console.log("here")
-
-                        }
-
-
-                
-
-  })
- }  
+   
+  
+         
 }
 
 
@@ -5422,41 +5284,7 @@ app.post("/addProduct",function(req,res){
 
           }) 
         })   
-         var transport=nodemailer.createTransport({
-            service:"gmail",
-            auth:{
-                user:"grocery.ofc@gmail.com",
-                pass:process.env.password
-            }
-        }); 
-
-
-            var mailoptions={
-                from:"grocery.ofc@gmail.com",
-                bcc:`${users[i].username}`,
-                subject:"GroceryJi",
-                html:`<div align=center><b>Hi,${users[i].first}</b><br><b>${prod.Name} New Product Added<br></b>
-                        <a href=https://groceryji.herokuapp.com/moreinfo/${prod._id}><b>Check It Out</b></b></a></div>
-                        
-                        
-                       
-                        `
-            }
-                console.log("hmmmmm")
-                transport.sendMail(mailoptions,function(err,info){
-                    if(err)
-                    {
-                        res.redirect("/moreinfo/"+prod._id)
-                    }
-                        else{
-                            console.log("here")
-
-                        }
-
-
-                
-
-})
+         
 
 
        }
